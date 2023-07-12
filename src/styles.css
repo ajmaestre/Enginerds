@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --main-color: #06D43D;
+    --second-color: #0CF607;
+    --third-color: #05EB83;
+    --fourth-color: rgb(6, 212, 177);
+    --fifth-color: #07DCF6;
+    --gradient: linear-gradient(90deg, rgba(6, 212, 177,1) 0%, rgba(100,220,200,1) 35%, rgba(150,245,255,1) 100%);
+    --footer-color: #05053b;
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0, 0, 0, .7);
+    --light-bg: #eee;
+    --border: .1rem solid #dfdfdf;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 52.5%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* --- Media Querie --- */
+
+@media (max-width: 991px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+}
