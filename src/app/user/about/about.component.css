@@ -1,0 +1,246 @@
+
+#head{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 55% 30%;
+    row-gap: 1.5rem;
+}
+
+.heading{
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 10rem 20rem 10rem 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.heading p{
+    width: 70%;
+    font-size: 2rem;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    text-align: left;
+    margin-bottom: 2rem;
+    transform: rotateY(180deg);
+}
+
+#head-img{
+    background: url(../../../assets/images/code-3.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+#photo{
+    background: url(../../../assets/images/foto.jpeg);
+    background-size: cover;
+    background-position: center;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    width: 30%;
+    height: 35rem;
+    margin-right: 10rem;
+    transform: rotateY(180deg);
+}
+
+.cite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 75%;
+}
+
+.text{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+    text-align: right;
+}
+
+.resume{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.resume h5{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 75%;
+}
+
+.anexo{
+    border: var(--border);
+    border-left: 5rem solid var(--main-color);
+    box-shadow: var(--box-shadow);
+    width: 75%;
+    margin-bottom: 2rem;
+    padding: 3rem 3rem;
+    color: var(--black);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.anexo:hover{
+    transform: scale(1.01);
+    color: var(--main-color);
+}
+
+.anexo .content{
+    width: 100%;
+}
+
+.anexo .content .text{
+    text-align: left;
+    color: inherit;
+}
+
+.motivaciones h5{
+    text-align: right;
+}
+
+.motivaciones .anexo{
+    border-right: 5rem solid var(--main-color);
+    border-left: none;
+}
+
+.motivaciones .anexo .content .text{
+    text-align: right;
+}
+
+.packages{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+.packages h5{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4.5rem;
+    width: 75%;
+}
+
+.packages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    width: 70%;
+}
+
+.packages .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.packages .box-container .box:hover{
+    transform: scale(1.01);
+}
+
+.packages .box-container .box .image{
+    height: 20rem;
+    overflow: hidden;
+    background: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.packages .box-container .box .image .img{
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+
+.packages .box-container .box .image{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: normal;
+}
+
+.packages .box-container .box .image .image-group{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.packages .box-container .box .content{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.packages .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.conclusion{
+    margin-bottom: 15rem;
+    padding: 0 15rem;
+}
+
+.conclusion .cite .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conclusion .cite .content .text{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    width: 40rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .heading h1{
+        font-size: 4rem;
+    }
+}

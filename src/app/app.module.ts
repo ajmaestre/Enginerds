@@ -18,6 +18,12 @@ import { ArticleComponent } from './user/article/article.component';
 import { BlogComponent } from './user/blog/blog.component';
 import { ContactComponent } from './user/contact/contact.component';
 import { SubscriptionComponent } from './user/subscription/subscription.component';
+import { CodeComponent } from './svg/code/code.component';
+import { AlgorithmComponent } from './svg/algorithm/algorithm.component';
+import { DataAnalysisComponent } from './svg/data-analysis/data-analysis.component';
+import { DatabaseComponent } from './svg/database/database.component';
+import { FixedComponent } from './svg/fixed/fixed.component';
+import { ResponsiveComponent } from './svg/responsive/responsive.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { SubscriptionComponent } from './user/subscription/subscription.componen
     ContactComponent,
     SubscriptionComponent,
     PageNotFoundComponent,
-    LateralMenuComponent
+    LateralMenuComponent,
+    CodeComponent,
+    AlgorithmComponent,
+    DataAnalysisComponent,
+    DatabaseComponent,
+    FixedComponent,
+    ResponsiveComponent
   ],
   imports: [
     BrowserModule,
