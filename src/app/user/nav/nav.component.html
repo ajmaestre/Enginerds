@@ -3,15 +3,16 @@
 
 <section [class]="class_header">
 
-    <a routerLink="home" class="logo">Enginerds</a>
+    <a routerLink="home-user" class="logo" (click)="showMenu()">Enginerds</a>
 
-    <nav [class]="class_navbar">
-        <a routerLink="home-user">Inicio</a>
-        <a routerLink="beginner-user">¿Primera vez?</a>
-        <a routerLink="subscription-user">Suscríbete</a>
-        <a routerLink="blog-user">Blog</a>
-        <a routerLink="about-user">Sobre mí</a>
-        <a routerLink="contact-user">Contáctanos</a>
+    <nav [class]="class_navbar" (click)="showMenu()">
+        <a routerLink="home-user" routerLinkActive="active" [style]="route_one">Inicio</a>
+        <a routerLink="beginner-user" routerLinkActive="active" [style]="route_two">¿Primera vez?</a>
+        <a routerLink="subscription-user" routerLinkActive="active" [style]="route_three">Suscríbete</a>
+        <a routerLink="blog-user" routerLinkActive="active" [style]="route_four">Blog</a>
+        <a routerLink="resource-user" routerLinkActive="active" [style]="route_five">Recursos</a>
+        <a routerLink="about-user" routerLinkActive="active" [style]="route_six">Sobre mí</a>
+        <a routerLink="contact-user" routerLinkActive="active" [style]="route_seven">Contáctanos</a>
     </nav>
 
     <div id="menu-btn" [class]="class_menu" (click)="showMenu()"></div>

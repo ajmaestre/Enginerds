@@ -24,6 +24,13 @@ import { DataAnalysisComponent } from './svg/data-analysis/data-analysis.compone
 import { DatabaseComponent } from './svg/database/database.component';
 import { FixedComponent } from './svg/fixed/fixed.component';
 import { ResponsiveComponent } from './svg/responsive/responsive.component';
+import { FreeComponent } from './svg/free/free.component';
+import { LimitComponent } from './svg/limit/limit.component';
+import { IlimitComponent } from './svg/ilimit/ilimit.component';
+import { AvatarComponent } from './svg/avatar/avatar.component';
+import { MessageComponent } from './svg/message/message.component';
+import { SupportComponent } from './svg/support/support.component';
+import { WhoComponent } from './svg/who/who.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +53,14 @@ import { ResponsiveComponent } from './svg/responsive/responsive.component';
     DataAnalysisComponent,
     DatabaseComponent,
     FixedComponent,
-    ResponsiveComponent
+    ResponsiveComponent,
+    FreeComponent,
+    LimitComponent,
+    IlimitComponent,
+    AvatarComponent,
+    MessageComponent,
+    SupportComponent,
+    WhoComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { AboutComponent } from './user/about/about.component';
 import { ContactComponent } from './user/contact/contact.component';
 import { ArticleComponent } from './user/article/article.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ResourceComponent } from './user/resource/resource.component';
+import { QuestionAndResponseComponent } from './user/question-and-response/question-and-response.component';
 
 
 const routesOptions: ExtraOptions = {
@@ -49,6 +51,14 @@ const routes: Routes = [
         {
           path: 'article-user',
           component: ArticleComponent,
+        },
+        {
+          path: 'resource-user',
+          component: ResourceComponent
+        },
+        {
+          path: 'p-&-r-user',
+          component: QuestionAndResponseComponent
         },
         {
           path: '', 

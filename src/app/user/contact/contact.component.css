@@ -97,6 +97,10 @@ section{
     color: var(--main-color);
 }
 
+.booking{
+    margin-bottom: 20rem;
+}
+
 .booking .book-form{
     padding: 2rem;
     background: var(--light-bg);
@@ -182,28 +186,53 @@ section{
 }
 
 @media (max-width: 450px) {
-    .heading-title{
-        font-size: 3.5rem;
+    .heading{
+        padding: 0;
+        min-height: 100vh;
+    }
+    .heading h1{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .cite{
+        flex-direction: column;
+    }
+    #photo{
+        margin: 5rem 0;
+    }
+    .content .text{
+        text-align: center;
+        width: 70%;
+        margin-bottom: 5rem;
     }
     .btn{
         width: 100%;
+    }
+    .content .box{
+        flex-direction: column;
+        margin: 10rem 0;
+    }
+    .content .box a{
+        margin-bottom: 2rem;
+    }
+    .booking{
+        padding: 0 4rem;
     }
 }
 
 @media (max-width: 991px) {
     section{
-        padding: 3rem 2rem;
-    }
-    .btn{
-        width: 100%;
+        padding: 0;
     }
 }
 
 @media (max-width: 1200px) {
     section{
-        padding: 3rem 5%;
-    }
-    .btn{
-        width: 100%;
+        padding: 0;
     }
 }

@@ -22,6 +22,7 @@ section{
     text-shadow: var(--text-shadow);
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeIn 1.2s linear backwards .2s;
 }
 
 .heading p{
@@ -30,11 +31,22 @@ section{
     text-shadow: var(--text-shadow);
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeIn 1.2s linear backwards .2s;
 }
 
 #head{
     background: url(../../../assets/images/code-3.jpg) no-repeat;
     background-size: cover;
+}
+
+.btn-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s linear backwards .2s;
 }
 
 .btn{
@@ -78,8 +90,178 @@ section{
     text-align: center;
 }
 
+.resume{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+
+.resume h5{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 75%;
+}
+
+.resume .anexo .content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.resume .anexo .content .text{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--black);
+    text-align: left;
+    padding: 0;
+}
+
+.anexo{
+    border: var(--border);
+    border-left: 5rem solid var(--main-color);
+    box-shadow: var(--box-shadow);
+    width: 75%;
+    margin-bottom: 2rem;
+    padding: 3rem 2rem;
+    color: var(--black);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.anexo:hover{
+    transform: scale(1.01);
+    color: var(--main-color);
+}
+
+.anexo .content{
+    width: 100%;
+}
+
+.benefits h5{
+    text-align: right;
+}
+
+.benefits .anexo{
+    border-left: none;
+    border-right: 5rem solid var(--main-color);
+}
+
+.benefits .anexo .content .text{
+    text-align: right;
+}
+
+.conclusion{
+    margin-bottom: 10rem;
+    padding: 0;
+    justify-content: center;
+}
+
+.conclusion .cite .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conclusion .cite .content .text{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.conclusion .cite .content .btn{
+    width: 40rem;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
 @media (max-width: 768px) {
+    .heading{
+        padding: 0;
+        min-height: 100vh;
+        margin-bottom: 30rem;
+    }
     .heading h1{
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .cite{
+        flex-direction: column;
+        margin: 0;
+    }
+    .resume{
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .content{
+        padding: 0;
+        margin: 0;
+    }
+    .text{
+        text-align: center;
+        width: 90%;
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+    .resume .anexo{
+        border-left: none;
+        border-top: 5rem solid var(--main-color);
+    }
+    .resume h5{
+        text-align: center;
+    }
+    .resume .anexo .content{
+        justify-content: center;
+        padding: 0;
+    }
+    .resume .anexo .content .text{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .benefits{
+        margin-top: 10rem;
+    }
+    .benefits .anexo{
+        border-right: none;
+    }
+    .conclusion{
+        padding: 10rem 0;
+    }
+    .conclusion .cite .content{
+        width: 85%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    section{
+        padding: 0;
+        grid-template-rows: 60% 30%;
+    }
+}
+
+@media (max-width: 1200px) {
+    section{
+        padding: 0;
+        grid-template-rows: 65% 30%;
     }
 }

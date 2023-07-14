@@ -206,8 +206,11 @@
 }
 
 .conclusion{
-    margin-bottom: 15rem;
+    min-height: 100vh;
     padding: 0 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .conclusion .cite .content{
@@ -240,7 +243,67 @@
 }
 
 @media (max-width: 768px) {
+    .heading{
+        padding: 7rem 0;
+        min-height: 100vh;
+        margin-bottom: 40rem;
+        flex-direction: column-reverse;
+    }
     .heading h1{
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 80%;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .cite{
+        flex-direction: column;
+    }
+    #photo{
+        display: none;
+    }
+    .content .text{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .resume{
+        margin-bottom: 10rem;
+    }
+    .resume h5{
+        text-align: center;
+    }
+    .resume .anexo{
+        border-left: none;
+        border-top: 5rem solid var(--main-color);
+    }
+    .resume .anexo .content .text{
+        text-align: center;
+    }
+    .motivaciones .anexo{
+        border-right: none;
+        border-top: 5rem solid var(--main-color);
+    }
+    .packages .box-container .box .content p{
+        text-align: center;
+    }
+    .conclusion .cite .content{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 991px) {
+    section{
+        padding: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    section{
+        padding: 0;
     }
 }

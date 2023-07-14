@@ -37,6 +37,26 @@ section{
     padding-right: 2rem;
 }
 
+.footer .legal{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.footer .legal a{
+    color: var(--light-white);
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    display: block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.footer .legal a:hover{
+    color: var(--main-color);
+}
+
 .footer .credit{
     text-align: center;
     padding-top: 3rem;

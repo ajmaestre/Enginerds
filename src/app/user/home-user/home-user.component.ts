@@ -20,8 +20,8 @@ export class HomeUserComponent implements OnInit, OnDestroy {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.getCategories();
-    this.getCategory();
+    // this.getCategories();
+    // this.getCategory();
   }
 
   getCategories(){

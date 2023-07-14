@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
-    margin: .5rem 0 10rem 0;
+    margin: .5rem 0 20rem 0;
 }
 
 section{
@@ -138,28 +138,47 @@ section{
 }
 
 @media (max-width: 450px) {
-    .heading-title{
-        font-size: 3.5rem;
+    .heading{
+        padding: 0;
+        min-height: 100vh;
+        margin-bottom: 40rem;
     }
-    .packages .box-container .box .content p{
-        font-size: 1.5rem;
+    .heading h1{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .cite{
+        flex-direction: column;
+    }
+    #photo{
+        margin: 5rem 0;
+    }
+    .content .text{
+        text-align: center;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .articles{
+        padding: 4rem;
+    }
+    .other-posts{
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
 }
 
 @media (max-width: 991px) {
     section{
-        padding: 3rem 2rem;
-    }
-    .packages .box-container .box .content p{
-        font-size: 1.5rem;
+        padding: 0;
     }
 }
 
 @media (max-width: 1200px) {
     section{
-        padding: 3rem 5%;
-    }
-    .packages .box-container .box .content p{
-        font-size: 1.5rem;
+        padding: 0;
     }
 }
