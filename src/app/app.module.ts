@@ -31,6 +31,11 @@ import { AvatarComponent } from './svg/avatar/avatar.component';
 import { MessageComponent } from './svg/message/message.component';
 import { SupportComponent } from './svg/support/support.component';
 import { WhoComponent } from './svg/who/who.component';
+import { ResourceComponent } from './user/resource/resource.component';
+import { SourceComponent } from './svg/source/source.component';
+import { ImageComponent } from './svg/image/image.component';
+import { TextFileComponent } from './svg/text-file/text-file.component';
+import { VideoComponent } from './svg/video/video.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +65,12 @@ import { WhoComponent } from './svg/who/who.component';
     AvatarComponent,
     MessageComponent,
     SupportComponent,
-    WhoComponent
+    WhoComponent,
+    ResourceComponent,
+    SourceComponent,
+    ImageComponent,
+    TextFileComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

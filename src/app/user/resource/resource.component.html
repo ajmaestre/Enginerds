@@ -1,1 +1,302 @@
-<p>resource works!</p>
+<!-- Resource Section Start -->
+
+<section class="services">
+    <div class="heading" id="head">
+        <h1 class="heading-title"> Recursos disponibles </h1>
+        <div class="box-container">
+
+            <a [routerLink]='"."' fragment="source" class="box">
+                <div class="img">
+                    <app-source></app-source>
+                </div>
+                <h3>Código fuente</h3>
+            </a>
+
+            <div [routerLink]='"."' fragment="text-file" class="box">
+                <div class="img">
+                    <app-text-file></app-text-file>
+                </div>
+                <h3>Archivo de texto</h3>
+            </div>
+
+            <div [routerLink]='"."' fragment="video" class="box">
+                <div class="img">
+                    <app-video></app-video>
+                </div>
+                <h3>Video</h3>
+            </div>
+
+            <div [routerLink]='"."' fragment="image" class="box">
+                <div class="img">
+                    <app-image></app-image>
+                </div>
+                <h3>Imagen</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="search">
+
+        <form method="post" class="book-form">
+
+            <div class="flex">
+                <div class="inputBox">
+                    <span class="text">También puedes usar la barra de búsqueda para encontrar el recurso que desees.</span>
+                    <div class="search-group">
+                        <input type="text" placeholder="Ingresa el nombre del recurso que deseas descargar" name="name">
+                        <a ><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<section class="packages" id="source">
+
+    <h1 class="heading-title"> Archivos de código fuente </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-source></app-source>
+                </div>
+                <p>HTML</p>
+            </div>
+            <div class="content">
+                <p>
+                    No importa si eres un estudiante de ingeniería de software
+                    en busca de conocimientos, un profesional experimentado en
+                    busca de consejos.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-source></app-source>
+                </div>
+                <p>CSS</p>
+            </div>
+            <div class="content">
+                <p>
+                    En este viaje desconocido, emocionante y educativo
+                    exploraremos juntos las últimas tendencias tecnológicas,
+                    compartiremos ideas valiosas.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-source></app-source>
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div class="content">
+                <p>
+                    Al interactuar con los lectores y recibir sus comentarios y preguntas,
+                    tengo la oportunidad de mejorar mis habilidades y descubrir temas desconocidos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn-group">
+        <a ><i class="fas fa-angle-left"></i></a>
+        <a ><i class="fas fa-angle-right"></i></a>
+    </div>
+
+</section>
+
+<section class="packages" id="text-file">
+
+    <h1 class="heading-title"> Archivos de texto </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-text-file></app-text-file>
+                </div>
+                <p>HTML</p>
+            </div>
+            <div class="content">
+                <p>
+                    No importa si eres un estudiante de ingeniería de software
+                    en busca de conocimientos, un profesional experimentado en
+                    busca de consejos.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-text-file></app-text-file>
+                </div>
+                <p>CSS</p>
+            </div>
+            <div class="content">
+                <p>
+                    En este viaje desconocido, emocionante y educativo
+                    exploraremos juntos las últimas tendencias tecnológicas,
+                    compartiremos ideas valiosas.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-text-file></app-text-file>
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div class="content">
+                <p>
+                    Al interactuar con los lectores y recibir sus comentarios y preguntas,
+                    tengo la oportunidad de mejorar mis habilidades y descubrir temas desconocidos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn-group">
+        <a ><i class="fas fa-angle-left"></i></a>
+        <a ><i class="fas fa-angle-right"></i></a>
+    </div>
+
+</section>
+
+<section class="packages" id="video">
+
+    <h1 class="heading-title"> Archivos de video </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-video></app-video>
+                </div>
+                <p>HTML</p>
+            </div>
+            <div class="content">
+                <p>
+                    No importa si eres un estudiante de ingeniería de software
+                    en busca de conocimientos, un profesional experimentado en
+                    busca de consejos.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-video></app-video>
+                </div>
+                <p>CSS</p>
+            </div>
+            <div class="content">
+                <p>
+                    En este viaje desconocido, emocionante y educativo
+                    exploraremos juntos las últimas tendencias tecnológicas,
+                    compartiremos ideas valiosas.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-video></app-video>
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div class="content">
+                <p>
+                    Al interactuar con los lectores y recibir sus comentarios y preguntas,
+                    tengo la oportunidad de mejorar mis habilidades y descubrir temas desconocidos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn-group">
+        <a ><i class="fas fa-angle-left"></i></a>
+        <a ><i class="fas fa-angle-right"></i></a>
+    </div>
+
+</section>
+
+<section class="packages" id="image">
+
+    <h1 class="heading-title"> Archivos de imagen </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-image></app-image>
+                </div>
+                <p>HTML</p>
+            </div>
+            <div class="content">
+                <p>
+                    No importa si eres un estudiante de ingeniería de software
+                    en busca de conocimientos, un profesional experimentado en
+                    busca de consejos.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-image></app-image>
+                </div>
+                <p>CSS</p>
+            </div>
+            <div class="content">
+                <p>
+                    En este viaje desconocido, emocionante y educativo
+                    exploraremos juntos las últimas tendencias tecnológicas,
+                    compartiremos ideas valiosas.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <div class="image-group">
+                    <app-image></app-image>
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div class="content">
+                <p>
+                    Al interactuar con los lectores y recibir sus comentarios y preguntas,
+                    tengo la oportunidad de mejorar mis habilidades y descubrir temas desconocidos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn-group">
+        <a ><i class="fas fa-angle-left"></i></a>
+        <a ><i class="fas fa-angle-right"></i></a>
+    </div>
+
+</section>
+
+<!-- Resource Section End -->

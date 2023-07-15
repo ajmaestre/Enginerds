@@ -1,0 +1,337 @@
+section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 55% 40%;
+}
+
+.heading {
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 10rem 25rem 10rem 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#head {
+    background: url(../../../assets/images/code-4.jpg) no-repeat;
+    background-size: cover;
+}
+
+.heading-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 7rem;
+    color: var(--white);
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.services {
+    width: 100vw;
+    padding: 0;
+}
+
+.box-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 5rem;
+}
+
+.box-container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--footer-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.box-container .box:hover {
+    background: var(--light-black);
+}
+
+.box-container .box .img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.img .image-group {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-container .box h3 {
+    color: var(--white);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.search {
+    padding: 0;
+}
+
+.text {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.book-form {
+    padding: 2rem;
+    margin: 0;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.book-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3.5rem;
+}
+
+.book-form .flex .inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.book-form .flex .inputBox .search-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.book-form .flex .inputBox input {
+    width: 50%;
+    padding: 1.2rem 1.4rem;
+    font-size: 2rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 2.5rem;
+    border: var(--border);
+}
+
+.book-form .flex .inputBox input:focus {
+    background: var(--light-black);
+    color: var(--white);
+}
+
+.book-form .flex .inputBox input:focus::placeholder {
+    background: var(--light-black);
+    color: var(--light-white);
+}
+
+.book-form .flex .search-group a {
+    font-size: 3.5rem;
+    background: var(--footer-color);
+    border: var(--border);
+    padding: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.book-form .flex .search-group a:hover {
+    background: var(--main-color);
+}
+
+.book-form .flex .search-group a i {
+    color: var(--white);
+}
+
+/* --------------------------------------------------------------------------- */
+
+.packages {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    margin-top: 0;
+}
+
+.packages .heading-title {
+    color: var(--black);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    width: 70%;
+}
+
+.packages .box-container .box {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    padding: 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.packages .box-container .box:hover {
+    transform: scale(1.01);
+}
+
+.packages .box-container .box .image {
+    height: 20rem;
+    overflow: hidden;
+    background: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.packages .box-container .box .image .img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+
+.packages .box-container .box .image {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: normal;
+}
+
+.packages .box-container .box .image .image-group {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.packages .box-container .box .content {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.packages .box-container .box .content p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 30%;
+    margin-top: 2rem;
+}
+
+.btn-group a {
+    color: var(--footer-color);
+    font-size: 5.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-group a i {
+    color: var(--footer-color);
+    padding-right: .5rem;
+    transition: .5s linear;
+}
+
+.btn-group a:hover i {
+    color: var(--main-color);
+}
+
+/*  */
+
+@media (max-width: 450px) {
+    .heading {
+        padding: 0;
+        min-height: 100vh;
+        margin-bottom: 40rem;
+    }
+    .heading h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+    .text{
+        font-size: 2rem;
+    }
+    .book-form .flex .inputBox {
+        width: 100%;
+    }
+    .book-form .flex .inputBox input {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .book-form .flex .search-group a {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 0;
+    }
+    .book-form .flex .inputBox {
+        width: 100%;
+    }
+    .book-form .flex .inputBox input {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .book-form .flex .search-group a {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        padding: 0;
+    }
+}

@@ -325,6 +325,20 @@ section{
     }
 }
 
+@media (max-width: 400px) {
+    .cite{
+        flex-direction: column;
+    }
+    #photo{
+        margin: 5rem 0;
+    }
+    .content .text{
+        text-align: center;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .heading{
         padding: 0;
@@ -362,6 +376,19 @@ section{
 @media (max-width: 991px) {
     section{
         padding: 0;
+    }
+    .heading{
+        padding: 0;
+        min-height: 100vh;
+    }
+    .heading h1{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 5rem;
     }
 }
 

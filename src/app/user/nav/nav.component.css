@@ -23,6 +23,34 @@ section{
     font-size: 2.5rem;
     color: var(--main-color);
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#e-left{
+    font-size: 4rem;
+    color: var(--footer-color);
+    transform: translateX(.2rem);
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .1rem;
+}
+
+#e-right{
+    font-size: 4rem;
+    transform: rotateY(180deg);
+    color: var(--footer-color);
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .3rem;
 }
 
 .header .navbar a{
@@ -76,6 +104,24 @@ section{
 @media (max-width: 991px) {
     section{
         padding: 3rem 2rem;
+    }
+    #menu-btn{
+        display: block;
+        transition: .2s linear;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
