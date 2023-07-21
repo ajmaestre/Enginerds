@@ -282,35 +282,57 @@ section {
     color: var(--main-color);
 }
 
-/*  */
+/* ----------------------------------------------------------------------------------- */
 
 @media (max-width: 450px) {
     .heading {
-        padding: 0;
         min-height: 100vh;
         margin-bottom: 40rem;
     }
+
     .heading h1 {
         font-size: 3rem;
         margin-bottom: 5rem;
     }
-    .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    .heading .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         gap: 2rem;
         padding: 0 2rem;
     }
-    .text{
+
+    .text {
         font-size: 2rem;
     }
+
     .book-form .flex .inputBox {
         width: 100%;
     }
+
     .book-form .flex .inputBox input {
         width: 100%;
         font-size: 1.3rem;
     }
+
     .book-form .flex .search-group a {
         font-size: 2.2rem;
+    }
+
+    .packages .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        padding: 1rem;
+        height: 100vh;
+        margin-bottom: 30rem;
+    }
+
+    .heading h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -318,13 +340,16 @@ section {
     section {
         padding: 0;
     }
+
     .book-form .flex .inputBox {
         width: 100%;
     }
+
     .book-form .flex .inputBox input {
         width: 100%;
         font-size: 2rem;
     }
+
     .book-form .flex .search-group a {
         font-size: 3rem;
     }

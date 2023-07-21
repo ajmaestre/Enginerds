@@ -239,7 +239,27 @@ section{
     section{
         padding: 0;
     }
-}
+    .heading{
+        padding: 0;
+        min-height: 100vh;
+    }
+    .heading h1{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .heading p{
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .content .box{
+        flex-direction: column;
+        margin: 10rem 0;
+    }
+    .content .box a{
+        margin-bottom: 2rem;
+    }
+} 
 
 @media (max-width: 1200px) {
     section{

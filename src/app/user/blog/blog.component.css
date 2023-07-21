@@ -206,6 +206,21 @@ section{
     .packages .box-container .box .content p{
         font-size: 1.5rem;
     }
+    .container{
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 10rem;
+    }
+    .page{
+        padding: 0;
+        width: 90%;
+        margin: 10rem 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        width: 70%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -214,5 +229,10 @@ section{
     }
     .packages .box-container .box .content p{
         font-size: 1.5rem;
+    }
+    .container{
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 10rem;
     }
 }

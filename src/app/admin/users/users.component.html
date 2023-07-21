@@ -1,0 +1,95 @@
+<!-- Users Section Start -->
+
+<div class="container">
+
+    <section class="packages">
+
+        <div class="search">
+
+            <form method="post" class="book-form">
+    
+                <div class="flex">
+                    <div class="inputBox">
+                        <div class="search-group">
+                            <input type="text" placeholder="Buscar usuario" name="name">
+                            <a ><i class="fas fa-search"></i></a>
+                            <a (click)="reload()"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+            </form>
+    
+        </div>
+
+        <div class="box-container">
+    
+            <div class="box" *ngFor="let user of listUsers">
+                <div class="image">
+                    <img src="user.image" *ngIf="user.image" alt="" class="photo">
+                    <i class="fas fa-user photo" *ngIf="!user.image"></i>
+                </div>
+                <div class="content">
+                    <h3>{{user.name}} {{user.lastname}}</h3>
+                    <div class="author">
+                        <div class="info">
+                            <p>
+                                Username:
+                                <span class="name">
+                                    {{user.username}}
+                                </span>
+                            </p>
+                            <p>
+                                Email:
+                                <span class="name">
+                                    {{user.email}}
+                                </span>
+                            </p>
+                            <p>
+                                Role:
+                                <span class="name">
+                                    {{user.role}}
+                                </span>
+                            </p>
+                            <p>
+                                Creado: 
+                                <span class="date">
+                                    {{user.created_at | date: 'short'}}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+    </section>
+    
+    
+    <div class="page">
+        <aside class="aside left">
+        
+            <section class="sect">
+                <h3>Usuarios</h3>
+                <div class="div three" routerLinkActive="active">
+                    <a class="p three" (click)="registerService.loadModalRegister=true">Registrar</a>
+                </div>
+                <div class="div three" routerLinkActive="active">
+                    <a class="p three">Eliminar</a>
+                </div>
+                <div class="div three" routerLinkActive="active">
+                    <a class="p three">Actualizar</a>
+                </div>
+            </section>
+        
+        </aside>
+    </div>
+
+</div>
+
+<div class="modal-register" *ngIf="registerService.loadModalRegister">
+    <app-register-users></app-register-users>
+</div>
+
+<!-- Users Section End -->

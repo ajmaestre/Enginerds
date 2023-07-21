@@ -1,0 +1,73 @@
+
+.aside{
+    width: 35rem;
+    font-family: var(--font-family-title);
+    font-size: .8rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sect{
+    width: inherit;
+    border: .1rem solid #dfdfdf;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.sect div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+.div.three{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.p.three{
+    margin-left: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .5s;
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+.p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.date{
+    text-align: left;
+    color: var(--light-black);
+    font-size: 1.3rem;
+}

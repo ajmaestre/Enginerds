@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -36,6 +36,16 @@ import { SourceComponent } from './svg/source/source.component';
 import { ImageComponent } from './svg/image/image.component';
 import { TextFileComponent } from './svg/text-file/text-file.component';
 import { VideoComponent } from './svg/video/video.component';
+import { LoginComponent } from './user/login/login.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import { HeaderComponent } from './admin/header/header.component';
+import { MenuComponent } from './admin/menu/menu.component';
+import { UsersComponent } from './admin/users/users.component';
+import { CategoriesComponent } from './admin/categories/categories.component';
+import { PostsComponent } from './admin/posts/posts.component';
+import { CommentsComponent } from './admin/comments/comments.component';
+import { RegisterComponent } from './user/register/register.component';
+import { RegisterUsersComponent } from './admin/register-users/register-users.component';
 
 @NgModule({
   declarations: [
@@ -70,12 +80,23 @@ import { VideoComponent } from './svg/video/video.component';
     SourceComponent,
     ImageComponent,
     TextFileComponent,
-    VideoComponent
+    VideoComponent,
+    LoginComponent,
+    HomeAdminComponent,
+    HeaderComponent,
+    MenuComponent,
+    UsersComponent,
+    CategoriesComponent,
+    PostsComponent,
+    CommentsComponent,
+    RegisterComponent,
+    RegisterUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

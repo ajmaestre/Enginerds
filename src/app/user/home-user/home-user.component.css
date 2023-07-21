@@ -1,12 +1,15 @@
-
-section{
+section {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 55% 30%;
     row-gap: 1.5rem;
 }
 
-.heading{
+.image-p{
+    width: 5rem;
+}
+
+.heading {
     background-size: cover !important;
     background-position: center !important;
     padding: 10rem 25rem 10rem 25rem;
@@ -17,7 +20,7 @@ section{
     min-width: 100vw;
 }
 
-.heading h1{
+.heading h1 {
     font-size: 7rem;
     color: var(--white);
     text-shadow: var(--text-shadow);
@@ -26,7 +29,7 @@ section{
     animation: fadeIn 1.2s linear backwards .2s;
 }
 
-.heading p{
+.heading p {
     font-size: 3rem;
     color: var(--white);
     text-shadow: var(--text-shadow);
@@ -35,12 +38,12 @@ section{
     animation: fadeIn 1.2s linear backwards .2s;
 }
 
-#head{
+#head {
     background: url(../../../assets/images/laptop-1.jpg) no-repeat;
     background-size: cover;
 }
 
-.btn-group{
+.btn-group {
     width: 100%;
     display: flex;
     align-items: center;
@@ -50,7 +53,7 @@ section{
     animation: fadeIn 1.2s linear backwards .2s;
 }
 
-.btn{
+.btn {
     display: inline-block;
     background: var(--light-black);
     margin-top: 1rem;
@@ -63,11 +66,11 @@ section{
     transition: .5s;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--main-color);
 }
 
-.cite{
+.cite {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +78,16 @@ section{
     flex-wrap: wrap;
 }
 
-#photo{
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#photo {
     background: url(../../../assets/images/foto.jpeg);
     background-size: cover;
     background-position: center;
@@ -85,14 +97,14 @@ section{
     margin-right: 5rem;
 }
 
-.content{
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.text{
+.text {
     font-size: 4rem;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
@@ -101,12 +113,12 @@ section{
     font-weight: 500;
 }
 
-.autor{
+.autor {
     font-size: 2rem;
     color: var(--light-black);
 }
 
-.packages{
+.packages {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -115,14 +127,14 @@ section{
     margin-bottom: 10rem;
 }
 
-.packages .box-container{
+.packages .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 3rem;
     width: 70%;
 }
 
-.packages .box-container .box{
+.packages .box-container .box {
     border: var(--border);
     box-shadow: var(--box-shadow);
     background: var(--white);
@@ -131,11 +143,11 @@ section{
     transition: .5s;
 }
 
-.packages .box-container .box:hover{
+.packages .box-container .box:hover {
     transform: scale(1.01);
 }
 
-.packages .box-container .box .image{
+.packages .box-container .box .image {
     height: 20rem;
     overflow: hidden;
     background: var(--footer-color);
@@ -145,19 +157,19 @@ section{
     flex-direction: column;
 }
 
-.packages .box-container .box .image .img{
+.packages .box-container .box .image .img {
     width: 8rem;
     height: 8rem;
     margin-bottom: 1rem;
 }
 
-.packages .box-container .box .image{
+.packages .box-container .box .image {
     font-size: 2rem;
     color: var(--white);
     font-weight: normal;
 }
 
-.packages .box-container .box .image .image-group{
+.packages .box-container .box .image .image-group {
     width: 10rem;
     height: 10rem;
     display: flex;
@@ -165,7 +177,7 @@ section{
     justify-content: center;
 }
 
-.packages .box-container .box .content{
+.packages .box-container .box .content {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -174,7 +186,7 @@ section{
     width: 100%;
 }
 
-.packages .box-container .box .content p{
+.packages .box-container .box .content p {
     font-size: 1.5rem;
     color: var(--light-black);
     line-height: 2;
@@ -185,7 +197,7 @@ section{
 
 /* ------------------------------------------------------------------------------------- */
 
-.articles{
+.articles {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -195,20 +207,20 @@ section{
     padding: 0 25rem;
 }
 
-.title-article{
+.title-article {
     margin: 8rem 0 2rem 0;
     font-size: 3rem;
     color: var(--black);
     text-align: center;
 }
 
-.other-posts{
+.other-posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 3rem;
 }
 
-.other-posts .box{
+.other-posts .box {
     border: var(--border);
     box-shadow: var(--box-shadow);
     background: var(--white);
@@ -218,48 +230,48 @@ section{
     transition: 1s;
 }
 
-.other-posts .box:hover .image .img{
+.other-posts .box:hover .image .img {
     transform: scale(1.1);
 }
 
-.other-posts .box .image{
+.other-posts .box .image {
     height: 20rem;
     overflow: hidden;
 }
 
-.other-posts .box .image .img{
+.other-posts .box .image .img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: .5s linear;
 }
 
-#image_1{
+#image_1 {
     background: url(../../../assets/images/matrix.jpg);
     background-size: cover;
 }
 
-#image_2{
+#image_2 {
     background: url(../../../assets/images/monitor-1.jpg);
     background-size: cover;
 }
 
-#image_3{
+#image_3 {
     background: url(../../../assets/images/website-1.png);
     background-size: cover;
 }
 
-#image_4{
+#image_4 {
     background: url(../../../assets/images/program-2.jpg);
     background-size: cover;
 }
 
-.other-posts .box .content{
+.other-posts .box .content {
     padding: 2rem;
     text-align: left;
 }
 
-.other-posts .box .content h3{
+.other-posts .box .content h3 {
     width: 100%;
     font-size: 2.5rem;
     color: var(--black);
@@ -267,7 +279,7 @@ section{
     text-align: left;
 }
 
-.other-posts .box .content p{
+.other-posts .box .content p {
     font-size: 1.5rem;
     color: var(--light-black);
     line-height: 2;
@@ -276,7 +288,7 @@ section{
     text-align: left;
 }
 
-.author{
+.author {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -285,7 +297,7 @@ section{
     width: 100%;
 }
 
-.photo{
+.photo {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
@@ -295,105 +307,160 @@ section{
     background-position: center;
 }
 
-.info{
+.info {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-.name{
+.name {
     text-align: left;
     color: var(--main-color);
     font-size: 1.7rem;
 }
 
-.date{
+.date {
     text-align: left;
     color: var(--light-black);
     font-size: 1.5rem;
 }
 
-.articles a{
+.articles a {
     margin: 4rem 0;
 }
 
 @keyframes fadeIn {
-    0%{
+    0% {
         transform: scale(0);
         opacity: 0;
     }
 }
 
 @media (max-width: 400px) {
-    .cite{
+    .cite {
         flex-direction: column;
+        height: 100vh;
+        padding: 2rem;
+        margin: 0;
     }
-    #photo{
+
+    #photo {
         margin: 5rem 0;
     }
-    .content .text{
+
+    .content .text {
         text-align: center;
         width: 70%;
         margin-bottom: 5rem;
     }
+
+    .content .autor {
+        text-align: center;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+
+    .packages .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 768px) {
-    .heading{
+    .heading {
         padding: 0;
         min-height: 100vh;
-        margin-bottom: 40rem;
     }
-    .heading h1{
+
+    .heading h1 {
         font-size: 3rem;
         margin-bottom: 5rem;
     }
-    .heading p{
+
+    .heading p {
         font-size: 2rem;
         width: 70%;
         margin-bottom: 5rem;
     }
-    .cite{
+
+    .cite {
         flex-direction: column;
     }
-    #photo{
+
+    #photo {
         margin: 5rem 0;
     }
-    .content .text{
+
+    .content .text {
         text-align: center;
         width: 70%;
         margin-bottom: 5rem;
     }
-    .articles{
+
+    .articles {
         padding: 4rem;
     }
-    .other-posts{
+
+    .other-posts {
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
 }
 
 @media (max-width: 991px) {
-    section{
-        padding: 0;
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
     }
-    .heading{
+
+    .heading {
         padding: 0;
         min-height: 100vh;
     }
-    .heading h1{
+
+    .heading h1 {
         font-size: 3rem;
         margin-bottom: 5rem;
     }
-    .heading p{
+
+    .heading p {
         font-size: 2rem;
         width: 70%;
         margin-bottom: 5rem;
     }
+
+    .cite{
+        height: 100vh;
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #photo{
+        margin-bottom: 5rem;
+    }
+
 }
 
 @media (max-width: 1200px) {
-    section{
+    section {
         padding: 0;
+    }
+    .heading h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    .heading p {
+        font-size: 2.5rem;
+        width: 90%;
+        margin-bottom: 5rem;
     }
 }

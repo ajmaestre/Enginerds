@@ -12,6 +12,8 @@ export class NavComponent implements OnInit {
   class_header: string = 'header';
   class_navbar: string = 'navbar';
 
+  class_submenu: string = 'submenu hide';
+
   style_route = {
     'color': '#06D43D',
   };
@@ -53,6 +55,15 @@ export class NavComponent implements OnInit {
       this.class_menu = 'fas fa-bars fa-times';
       this.class_header = 'header active';
       this.class_navbar = 'navbar active';
+    }
+  }
+
+  showSubMenu(){
+    const test = /hide/;
+    if(test.test(this.class_submenu)){
+      this.class_submenu = 'submenu show';
+    }else{
+      this.class_submenu = 'submenu hide';
     }
   }
 

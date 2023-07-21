@@ -1,0 +1,53 @@
+
+<!-- Register Section Start -->
+
+<section id="head">
+    <div class="heading" id="head-img">
+        <h1>Registra tus datos</h1>
+        <a  [routerLink]='"."' fragment="formulario" id="btn">Ir al formulario</a>
+    </div> 
+</section>
+
+<div class="div">
+    <p class="p">
+        Únete ahora y obtén acceso exclusivo a contenido de calidad.
+    </p>
+    <p class="p">
+        ¡No pierdas esta oportunidad de unirte a nuestra comunidad y disfrutar de contenido valioso! 
+    </p>
+</div>
+
+<section class="booking" id="formulario">
+
+    <form  [formGroup]="data" class="book-form">
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Nombre :</span>
+                <input type="text" placeholder="Ingresa tu nombre" formControlName="name">
+            </div>
+            <div class="inputBox">
+                <span>Apellido :</span>
+                <input type="text" placeholder="Ingresa tu apellido" formControlName="lastname">
+            </div>
+            <div class="inputBox">
+                <span>Nombre de usuario :</span>
+                <input type="text" placeholder="Ingresa tu nombre de usuario" formControlName="username">
+            </div>
+            <div class="inputBox">
+                <span>Correo electrónico :</span>
+                <input type="email" placeholder="Ingresa tu correo electrónico" formControlName="email">
+            </div>
+            <div class="inputBox">
+                <span>Contraseña :</span>
+                <input type="password" placeholder="Ingresa tu contraseña" formControlName="password">
+            </div>
+        </div>
+
+        <button type="submit" class="btn" (click)="register()">Registrar</button>
+
+    </form>
+
+</section>
+
+<!-- Register Section End -->

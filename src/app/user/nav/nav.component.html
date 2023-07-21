@@ -3,7 +3,7 @@
 
 <section [class]="class_header">
 
-    <a routerLink="home-user" class="logo" (click)="showMenu()">
+    <a routerLink="home-user" class="logo">
         <span>E</span>
         <span>n</span>
         <span>g</span>
@@ -20,14 +20,20 @@
         <span>s</span>
     </a>
 
-    <nav [class]="class_navbar" (click)="showMenu()">
+    <nav [class]="class_navbar">
         <a routerLink="home-user" routerLinkActive="active" [style]="route_one">Inicio</a>
         <a routerLink="beginner-user" routerLinkActive="active" [style]="route_two">¿Primera vez?</a>
         <a routerLink="subscription-user" routerLinkActive="active" [style]="route_three">Suscríbete</a>
         <a routerLink="blog-user" routerLinkActive="active" [style]="route_four">Blog</a>
-        <a routerLink="resource-user" routerLinkActive="active" [style]="route_five">Recursos</a>
         <a routerLink="about-user" routerLinkActive="active" [style]="route_six">Sobre mí</a>
         <a routerLink="contact-user" routerLinkActive="active" [style]="route_seven">Contáctanos</a>
+        <a class="icon-user" (click)="showSubMenu()"><i class="fas fa-user"></i></a>
+        <div [class]="class_submenu">
+            <a routerLink="login-user" href="">Iniciar sesión</a>
+            <a routerLink="resource-user" routerLinkActive="active" [style]="route_five">Recursos</a>
+            <a routerLink="p-&-r-user">P&R</a>
+            <a >Cerrar sesión</a>
+        </div>   
     </nav>
 
     <div id="menu-btn" [class]="class_menu" (click)="showMenu()"></div>

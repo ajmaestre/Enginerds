@@ -12,6 +12,14 @@ import { ArticleComponent } from './user/article/article.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ResourceComponent } from './user/resource/resource.component';
 import { QuestionAndResponseComponent } from './user/question-and-response/question-and-response.component';
+import { LoginComponent } from './user/login/login.component';
+import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import { UsersComponent } from './admin/users/users.component';
+import { CategoriesComponent } from './admin/categories/categories.component';
+import { PostsComponent } from './admin/posts/posts.component';
+import { CommentsComponent } from './admin/comments/comments.component';
+import { RegisterComponent } from './user/register/register.component';
+import { RouteGuardGuard } from './guards/route-guard.guard';
 
 
 const routesOptions: ExtraOptions = {
@@ -61,6 +69,13 @@ const routes: Routes = [
           component: QuestionAndResponseComponent
         },
         {
+          path: 'login-user',
+          component: LoginComponent
+        },
+        {
+          path: 'register-user', component: RegisterComponent
+        },
+        {
           path: '', 
           redirectTo: 'home-user',
           pathMatch: 'full' 
@@ -68,7 +83,29 @@ const routes: Routes = [
       ]
   },
   {
-    path: 'admin', component: AdminComponent
+    path: 'admin', component: AdminComponent, canActivate: [RouteGuardGuard], 
+      children: [
+        {
+          path: 'admin-home', component: HomeAdminComponent
+        },
+        {
+          path: 'users', component: UsersComponent
+        },
+        {
+          path: 'categories', component: CategoriesComponent
+        },
+        {
+          path: 'posts', component: PostsComponent
+        },
+        {
+          path: 'comments', component: CommentsComponent
+        },
+        {
+          path: '', 
+          redirectTo: 'admin-home',
+          pathMatch: 'full' 
+        }
+      ]
   },
   {
     path: '', redirectTo: 'home', pathMatch: 'full'

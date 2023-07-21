@@ -1,0 +1,113 @@
+
+.booking{
+    margin-bottom: 20rem;
+    animation: fadeIn .5s linear backwards .2s;
+}
+
+.booking .book-form{
+    padding: 2rem;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.booking .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.booking .book-form .flex .inputBox{
+    flex: 1 1 41rem;
+    width: 90%;
+}
+
+.booking .book-form .flex .inputBox input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.booking .book-form .flex .inputBox input:focus{
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.booking .book-form .flex .inputBox input:focus::placeholder{
+    background: var(--main-color);
+    color: var(--light-white);
+}
+
+.booking .book-form .flex .inputBox span{
+    font-size: 2rem;
+    color: var(--light-black);
+    margin: 0;
+}
+
+.booking .book-form .btn{
+    margin-top: 4rem;
+    transition: 1s;
+}
+
+.btn-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn{
+    width: 30%;
+    display: inline-block;
+    background: var(--black);
+    margin: 2rem 0;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .btn{
+        width: 100%;
+    }
+    .booking{
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    section{
+        padding: 0;
+        margin: 0;
+        min-height: 30vh;
+    }
+} 
+
+@media (max-width: 1200px) {
+    section{
+        padding: 0;
+    }
+}

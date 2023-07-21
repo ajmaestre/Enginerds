@@ -1,0 +1,118 @@
+section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 40% 55%;
+    row-gap: 1.5rem;
+}
+
+.heading {
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 10rem 25rem 10rem 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100vw;
+}
+
+.heading h1 {
+    font-size: 5rem;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.2s linear backwards .2s;
+}
+
+.heading p {
+    font-size: 3rem;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.2s linear backwards .2s;
+}
+
+#head {
+    background: url(../../assets/images/laptop-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s linear backwards .2s;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--light-black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    width: 30rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+.cite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.text-title{
+    font-size: 20rem;
+    transform: scale(1.5);
+}
+
+.text {
+    font-size: 4rem;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    color: var(--light-black);
+    font-weight: 500;
+}
+
+.autor {
+    font-size: 2rem;
+    color: var(--light-black);
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

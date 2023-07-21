@@ -10,11 +10,13 @@ import { ArticleComponent } from './article/article.component';
 import { LateralMenuComponent } from './lateral-menu/lateral-menu.component';
 import { ResourceComponent } from './resource/resource.component';
 import { QuestionAndResponseComponent } from './question-and-response/question-and-response.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
 @NgModule({
-  declarations: [UserComponent, SubscriptionComponent, BlogComponent, AboutComponent, ContactComponent, ArticleComponent, LateralMenuComponent, ResourceComponent, QuestionAndResponseComponent],
+  declarations: [UserComponent, SubscriptionComponent, BlogComponent, AboutComponent, ContactComponent, ArticleComponent, LateralMenuComponent, ResourceComponent, QuestionAndResponseComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule
   ],

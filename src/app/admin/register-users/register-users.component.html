@@ -1,0 +1,44 @@
+
+<!-- Contact Section Start -->
+
+<section class="booking" id="formulario">
+
+    <form  [formGroup]="data" class="book-form">
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Nombre :</span>
+                <input type="text" placeholder="Ingresa el nombre" formControlName="name">
+            </div>
+            <div class="inputBox">
+                <span>Apellido :</span>
+                <input type="text" placeholder="Ingresa el apellido" formControlName="lastname">
+            </div>
+            <div class="inputBox">
+                <span>Nombre de usuario :</span>
+                <input type="text" placeholder="Ingresa el nombre de usuario" formControlName="username">
+            </div>
+            <div class="inputBox">
+                <span>Correo electrónico :</span>
+                <input type="email" placeholder="Ingresa el correo electrónico" formControlName="email">
+            </div>
+            <div class="inputBox">
+                <span>Role :</span>
+                <input type="text" placeholder="Ingresa el role del usuario" formControlName="role">
+            </div>
+            <div class="inputBox">
+                <span>Contraseña :</span>
+                <input type="password" placeholder="Ingresa la contraseña" formControlName="password">
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn" (click)="registerService.loadModalRegister=false">Cerrar</button>
+            <button type="submit" class="btn" (click)="register()">Registrar</button>
+        </div>
+
+    </form>
+
+</section>
+
+<!-- Contact Section End -->

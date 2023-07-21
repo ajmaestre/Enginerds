@@ -1,0 +1,30 @@
+
+<!-- Login Section Start -->
+
+<section id="head">
+    <div class="heading" id="head-img">
+        <h1>Iniciar sesión</h1>
+    </div> 
+    
+    <form [formGroup]="data" class="book-form">
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Correo electrónico o nombre de usuario :</span>
+                <input type="text" placeholder="Ingresa tu correo electrónico o nombre de usuario" formControlName="username">
+            </div>
+            <div class="inputBox">
+                <span>Contraseña :</span>
+                <input type="password" placeholder="Ingresa tu correo contraseña" formControlName="password">
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a routerLink="../subscription-user" class="btn">Suscribirme</a>
+            <button type="submit" class="btn" (click)="login()">Iniciar sesión</button>
+        </div>
+
+    </form>
+</section>
+
+<!-- Login Section End -->

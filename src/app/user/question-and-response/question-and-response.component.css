@@ -1,0 +1,189 @@
+section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.heading {
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 10rem 25rem 10rem 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100vw;
+}
+
+.heading h1 {
+    font-size: 6rem;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin-bottom: 0;
+    animation: fadeIn 1.2s linear backwards .2s;
+}
+
+#head {
+    background: url(../../../assets/images/laptop-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.search {
+    padding: 0;
+    width: 80%;
+}
+
+.book-form {
+    padding: 2rem;
+    margin: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.book-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.book-form .flex .inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.book-form .flex .inputBox .search-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.book-form .flex .inputBox input {
+    width: inherit;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.5rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 2.5rem;
+    border: var(--border);
+}
+
+.book-form .flex .inputBox input:focus {
+    background: var(--light-black);
+    color: var(--white);
+}
+
+.book-form .flex .inputBox input:focus::placeholder {
+    background: var(--light-black);
+    color: var(--light-white);
+}
+
+.book-form .flex .search-group a {
+    font-size: 2.5rem;
+    background: var(--footer-color);
+    border: var(--border);
+    padding: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.book-form .flex .search-group a:hover {
+    background: var(--main-color);
+}
+
+.book-form .flex .search-group a i {
+    color: var(--white);
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s linear backwards .2s;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--light-black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    width: 30rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+.footer{
+    background: var(--light-bg);
+    padding: 5rem 10%;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+.footer .box-container .box h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+.footer .box-container .box a i{
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: .5s linear;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
