@@ -11,9 +11,14 @@
                 <div class="flex">
                     <div class="inputBox">
                         <div class="search-group">
-                            <input type="text" placeholder="Buscar usuario" name="name">
+                            <input type="text" placeholder="Buscar usuario" name="name" (keypress)="searchUser($event)">
                             <a ><i class="fas fa-search"></i></a>
                             <a (click)="reload()"><i class="fas fa-redo-alt"></i></a>
+                            <div class="btn-group">
+                                <a (click)="registerService.loadModalRegister=true"><i class="fas fa-save"></i></a>
+                                <a (click)="deleteUsers()"><i class="fas fa-trash"></i></a>
+                                <a (click)="updateUser()"><i class="fas fa-edit"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -22,11 +27,21 @@
     
         </div>
 
+        <div class="cite" *ngIf="!listUsers.length">
+            <div class="profile">
+                <div class="content">
+                    <h1 class="text-title">404</h1>
+                    <p class="text">¡Lo sentimos! Aún no hay usuarios en la base de datos</p>
+                    <span class="autor">¡Intenta agregar una nuevo usuario!</span>
+                </div>
+            </div>
+        </div>
+
         <div class="box-container">
     
-            <div class="box" *ngFor="let user of listUsers">
+            <div class="box" [class.background-selected]="boxSelected(user.email || '')" *ngFor="let user of listUsers" (click)="userSelected(user.email || '')">
                 <div class="image">
-                    <img src="user.image" *ngIf="user.image" alt="" class="photo">
+                    <img [src]="user.image" *ngIf="user.image" alt="" class="photo">
                     <i class="fas fa-user photo" *ngIf="!user.image"></i>
                 </div>
                 <div class="content">
@@ -65,31 +80,29 @@
         </div>
         
     </section>
-    
-    
-    <div class="page">
-        <aside class="aside left">
-        
-            <section class="sect">
-                <h3>Usuarios</h3>
-                <div class="div three" routerLinkActive="active">
-                    <a class="p three" (click)="registerService.loadModalRegister=true">Registrar</a>
-                </div>
-                <div class="div three" routerLinkActive="active">
-                    <a class="p three">Eliminar</a>
-                </div>
-                <div class="div three" routerLinkActive="active">
-                    <a class="p three">Actualizar</a>
-                </div>
-            </section>
-        
-        </aside>
-    </div>
 
 </div>
 
-<div class="modal-register" *ngIf="registerService.loadModalRegister">
+<div class="modal" *ngIf="registerService.loadModalRegister">
     <app-register-users></app-register-users>
+</div>
+
+<div class="modal" *ngIf="updateService.loadModalUpdate">
+    <app-update-users></app-update-users>
+</div>
+
+<div class="modal" *ngIf="modal_msg">
+    <div class="card-msg">
+        <div class="flex">
+            <p>
+                {{msg}}
+            </p>
+        </div>
+    
+        <div class="btn-group">
+            <button type="submit" class="btn" (click)="modal_msg=false">Cerrar</button>
+        </div>
+    </div>
 </div>
 
 <!-- Users Section End -->

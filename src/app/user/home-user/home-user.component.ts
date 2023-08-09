@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -8,16 +9,17 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HomeUserComponent implements OnInit, OnDestroy {
 
-  constructor() {
+
+  constructor(private userService: UserService) {
 
   }
 
   ngOnInit(): void {
-
   }
 
+  getUsers(){}
+
   ngOnDestroy(): void {
-    
   }
 
 }

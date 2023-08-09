@@ -1,0 +1,71 @@
+<!-- Add Post Section Start -->
+
+<div class="container">
+
+    <section class="packages">
+
+
+        <div class="post-body">
+
+            <section class="booking" id="formulario">
+
+                <div class="box">
+                    <div class="image">
+                        <!-- <img [src]="imageUrl" *ngIf="user.image" alt="" class="photo"> -->
+                        <i class="fas fa-image photo"></i>
+                        <div class="file-box" id="file-img">
+                            <input type="file" name="file-img" aria-label="Cambiar foto" (change)="onLoad($event)">
+                        </div>
+                    </div>
+                </div>
+
+                <form class="book-form" [formGroup]="dataPost">
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Título :</span>
+                            <input type="text" placeholder="Ingresa el título" formControlName="title">
+                        </div>
+                        <div class="inputBox">
+                            <span>Subcategoría :</span>
+                            <select [(ngModel)]="subCatSelected" name="subcategorias" id="subcategorias" formControlName="subcategory_id">
+                                <option value="subcategoria">Subcategoría</option>
+                                <option *ngFor="let subCategory of listSubCategory" value="{{subCategory.id}}">{{subCategory.name}}</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Resumen :</span>
+                                <textarea name="brief" class="message" formControlName="brief"></textarea>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Introducción :</span>
+                                <textarea name="introduction" class="message" formControlName="introduction"></textarea>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Conclusión :</span>
+                                <textarea name="conclusion" class="message" formControlName="conclusion"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn" (click)="savePost()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+
+    </section>
+
+</div>
+
+<!-- Add Post Section End -->

@@ -1,1 +1,128 @@
-<p>categories works!</p>
+<!-- Categories Section Start -->
+
+<div class="container">
+
+    <section class="packages">
+
+        <div class="search">
+
+            <form class="book-form">
+    
+                <div class="flex">
+                    <div class="inputBox">
+                        <div class="search-group">
+                            <input type="text" placeholder="Buscar categoría" name="name" (keypress)="search($event)">
+                            <a ><i class="fas fa-search"></i></a>
+                            <a (click)="reload()"><i class="fas fa-redo-alt"></i></a>
+                            <div class="btn-group">
+                                <a (click)="addCategoryService.modalShowed(false, 0)"><i class="fas fa-plus-square"></i></a>
+                                <a (click)="deleteCategories()"><i class="fas fa-trash"></i></a>
+                                <a (click)="updateCategory()"><i class="fas fa-edit"></i></a>
+                                <a (click)="showModalSubCategory()"><i class="fas fa-bezier-curve"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </form>
+    
+        </div>
+
+        <div class="cite" *ngIf="!listCategory.length">
+            <div class="profile">
+                <div class="content">
+                    <h1 class="text-title">404</h1>
+                    <p class="text">¡Lo sentimos! Aún no hay categorías en la base de datos</p>
+                    <span class="autor">¡Intenta agregar una nueva categoría!</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-container">
+    
+            <div class="box" [class.selected]="boxSelected(category.id || 0)" *ngFor="let category of listCategory" (click)="categorySelected(category.id || 0)">
+                <div class="image">
+                    <div class="image-group">
+                        <app-source></app-source>
+                    </div>
+                    <p>{{category.name}}</p>
+                </div>
+                <div class="content">
+                    <p>
+                        {{category.description}}
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+        
+    </section>
+
+</div>
+
+<div class="modal" *ngIf="addCategoryService.showModal">
+    <app-add-category></app-add-category>
+</div>
+
+<div class="modal" *ngIf="modal_msg">
+    <div class="card-msg">
+        <div class="flex">
+            <p>
+                {{msg}}
+            </p>
+        </div>
+    
+        <div class="btn-group">
+            <button type="submit" class="btn" (click)="modal_msg=false">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" *ngIf="showSubCategory">
+    <div class="card">
+        <div class="body">
+            <div class="data">
+                <form [formGroup]="dataSub" class="book-form">
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Nombre :</span>
+                            <input type="text" formControlName="name">
+                        </div>
+                    </div>     
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Descripción :</span>
+                            <textarea name="description" class="message" id="msg" formControlName="description"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="list">
+                <div class="btn-group">
+                    <input type="text" placeholder="Buscar subcategoría" name="name" (keypress)="searchSubCategory($event)">
+                    <a (click)="reloadListSubCat()" class="reload"><i class="fas fa-redo-alt"></i></a>
+                    <a (click)="cleanFormSubCategory()"><i class="fas fa-brush"></i></a>
+                    <a (click)="saveSubCategory()"><i class="fas fa-save"></i></a>
+                    <a (click)="deleteSubCategory()"><i class="fas fa-trash"></i></a>
+                    <a (click)="editSubCategory()"><i class="fas fa-edit"></i></a>
+                </div>
+                <ul>
+                    <div class="cite" *ngIf="!listSubCategory.length">
+                        <div class="profile">
+                            <div class="content">
+                                <p class="text">¡Lo sentimos! Aún no hay subcategorías en la base de datos</p>
+                                <span class="autor">¡Intenta agregar una nueva subcategoría!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <li *ngFor="let subCat of listSubCategory" (click)="chargeSubCategory(subCat)"><a >{{subCat.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn" (click)="showSubCategory=false">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Categories Section End -->

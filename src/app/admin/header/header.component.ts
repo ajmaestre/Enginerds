@@ -1,12 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, Event, NavigationEnd } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AdminService } from '../admin.service';
+import { Subscription } from 'rxjs';
+import { User } from 'src/app/interfaces/user';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+
+  profileSubscription!: Subscription;
+  photoSubscription!: Subscription;
+
+  profileUser: User = {};
+  imgUrl: SafeUrl = '';
 
   class_menu: string = 'fas fa-bars';
   class_header: string = 'header';
@@ -14,35 +24,13 @@ export class HeaderComponent implements OnInit {
 
   class_submenu: string = 'submenu hide';
 
-  style_route = {
-    'color': '#06D43D',
-  };
-  route_one = {};
-  route_two = {};
-  route_three = {};
-  route_four = {};
-  route_five = {};
-  route_six = {};
-  route_seven = {};
 
-  constructor(private router: Router) {
-    this.route_one = this.style_route;
-    this.route_two = {};
-    this.route_three = {};
-    this.route_four = {};
-    this.route_five = {};
-    this.route_six = {};
-    this.route_seven = {};
-    this.router.events.subscribe((event: Event) => {
-
-        if (event instanceof NavigationEnd) {
-            this.isRoute(event.url);
-        }
-
-    });
+  constructor(private router: Router, private adminService: AdminService, private sanitizer: DomSanitizer) {
+    
   }
 
   ngOnInit(): void {
+    this.getProfile();
   }
 
   showMenu(){
@@ -67,71 +55,37 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  isRoute(route: string){
-    const regexp_one = /home-user/;
-    const regexp_two = /beginner-user/;
-    const regexp_three = /subscription-user/;
-    const regexp_four = /blog-user/;
-    const regexp_five = /resource-user/;
-    const regexp_six = /about-user/;
-    const regexp_seven = /contact-user/;
-    if(regexp_one.test(route)){
-      this.route_one = this.style_route;
-      this.route_two = {};
-      this.route_three = {};
-      this.route_four = {};
-      this.route_five = {};
-      this.route_six = {};
-      this.route_seven = {};
-    }else if(regexp_two.test(route)){
-      this.route_two = this.style_route;
-      this.route_one = {};
-      this.route_three = {};
-      this.route_four = {};
-      this.route_five = {};
-      this.route_seven = {};
-      this.route_six = {};
-    }else if(regexp_three.test(route)){
-      this.route_three = this.style_route;
-      this.route_two = {};
-      this.route_one = {};
-      this.route_four = {};
-      this.route_five = {};
-      this.route_seven = {};
-      this.route_six = {};
-    }else if(regexp_four.test(route)){
-      this.route_four = this.style_route;
-      this.route_two = {};
-      this.route_three = {};
-      this.route_one = {};
-      this.route_five = {};
-      this.route_seven = {};
-      this.route_six = {};
-    }else if(regexp_five.test(route)){
-      this.route_five = this.style_route;
-      this.route_two = {};
-      this.route_three = {};
-      this.route_four = {};
-      this.route_one = {};
-      this.route_seven = {};
-      this.route_six = {};
-    }else if(regexp_six.test(route)){
-      this.route_six = this.style_route;
-      this.route_two = {};
-      this.route_three = {};
-      this.route_four = {};
-      this.route_five = {};
-      this.route_seven = {};
-      this.route_one = {};
-    }else if(regexp_seven.test(route)){
-      this.route_seven = this.style_route;
-      this.route_two = {};
-      this.route_three = {};
-      this.route_four = {};
-      this.route_five = {};
-      this.route_six = {};
-      this.route_one = {};
-    }
+  getProfile(){
+    this.profileSubscription = this.adminService.getProfile().subscribe({
+      next: (res: User) => {
+        this.profileUser = res;
+        this.getPhoto();
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
+  getPhoto(){
+    this.photoSubscription = this.adminService.getPhoto(this.profileUser.image || '').subscribe({
+      next: (res: Blob) => {
+        this.imgUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(res));
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
+
+  logOut(){
+    localStorage.clear();
+    this.router.navigate(['/']);
+  }
+
+  ngOnDestroy(): void {
+    this.profileSubscription?.unsubscribe();
+    this.photoSubscription?.unsubscribe();
   }
 
 }

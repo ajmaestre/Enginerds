@@ -1,0 +1,31 @@
+<!-- Add Category Section Start -->
+
+<section class="booking" id="formulario">
+
+    <form [formGroup]="data" class="book-form">
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Nombre :</span>
+                <input type="text" placeholder="Ingresa el nombre de la categoría" formControlName="name">
+            </div>
+        </div>
+
+        <div class="flex">
+            <div class="inputBox">
+                <span>Descripción :</span>
+                <textarea name="description" class="message" id="msg" formControlName="description"></textarea>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn btn-close" (click)="addService.showModal=false">Cerrar</button>
+            <button type="submit" class="btn" (click)="register()" *ngIf="!addService.modeUpdate">Registrar</button>
+            <button type="submit" class="btn" (click)="updateCategory()" *ngIf="addService.modeUpdate">Actualizar</button>
+        </div>
+
+    </form>
+
+</section>
+
+<!-- Add Category Section End -->

@@ -1,6 +1,6 @@
 
 .aside{
-    width: 35rem;
+    width: 30rem;
     font-family: var(--font-family-title);
     font-size: .8rem;
     display: flex;
@@ -70,4 +70,8 @@ h3{
     text-align: left;
     color: var(--light-black);
     font-size: 1.3rem;
+}
+
+.active{
+    color: var(--main-color);
 }

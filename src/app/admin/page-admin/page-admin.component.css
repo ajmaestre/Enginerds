@@ -1,0 +1,343 @@
+.container {
+    padding: 5rem 5rem 5rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.box {
+    width: 35%;
+    height: 55rem;
+    margin: 0;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    display: inline-block;
+}
+
+.box .image {
+    position: relative;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--light-black);
+}
+
+.box .image i {
+    font-size: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-box {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-block;
+    background: url(../../../assets/images/edit.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.file-box:hover{
+    background: url(../../../assets/images/edit-2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.file-box::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.file-box input[type="file"] {
+    opacity: 0;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.box .content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.box .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 2.5rem 0 2rem 0;
+    text-align: center;
+}
+
+.box .content p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 0;
+    text-align: center;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.photo {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.booking {
+    width: 100%;
+    animation: fadeIn .5s linear backwards .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.booking .book-form {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.booking .book-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.booking .book-form .flex .inputBox {
+    flex: 1 1 41rem;
+    width: 90%;
+}
+
+.booking .book-form .flex .inputBox input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.booking .book-form .flex .inputBox input:focus {
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.booking .book-form .flex .inputBox input:focus::placeholder {
+    background: var(--main-color);
+    color: var(--light-white);
+}
+
+.booking .book-form .flex .inputBox span {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    margin: 0;
+}
+
+.div-msg{
+    margin-top: 4rem;
+}
+
+.booking .book-form .flex .inputBox .message{
+    width: 100%;
+    height: 20rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.5rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.2rem;
+    border: var(--border);
+}
+
+.booking .book-form .btn-group .alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.booking .book-form .btn-group .alert p {
+    font-size: 1.5rem;
+    color: red;
+    margin: 0;
+    text-align: center;
+}
+
+.booking .book-form .btn {
+    margin-top: 4rem;
+    transition: 1s;
+}
+
+.btn-more{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn-more a{
+    color: var(--light-white);
+    font-size: 2rem;
+    display: block;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.btn-more a i{
+    color: var(--black);
+}
+
+.btn-more a:hover i{
+    color: var(--main-color);
+}
+
+.submenu.hide{
+    display: none;
+    transition: 1s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.submenu.show{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    border: .1rem solid #dfdfdf;
+    box-shadow: var(--box-shadow);
+    width: auto;
+    top: 2rem;
+    right: 5rem;
+    background-color: var(--white);
+    padding: 2rem;
+    padding-right: 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.submenu.show a{
+    margin: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.submenu.show a:hover{
+    color: var(--main-color);
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 40%;
+    display: inline-block;
+    background: var(--black);
+    margin: 2rem 0;
+    color: var(--white);
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-close {
+    background: transparent;
+    border: .1rem solid var(--light-black);
+    color: var(--light-black);
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .btn {
+        width: 100%;
+    }
+
+    .booking {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 0;
+        margin: 0;
+        min-height: 30vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        padding: 0;
+    }
+}

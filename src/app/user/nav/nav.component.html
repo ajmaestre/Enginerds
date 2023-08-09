@@ -21,18 +21,30 @@
     </a>
 
     <nav [class]="class_navbar">
-        <a routerLink="home-user" routerLinkActive="active" [style]="route_one">Inicio</a>
-        <a routerLink="beginner-user" routerLinkActive="active" [style]="route_two">¿Primera vez?</a>
-        <a routerLink="subscription-user" routerLinkActive="active" [style]="route_three">Suscríbete</a>
-        <a routerLink="blog-user" routerLinkActive="active" [style]="route_four">Blog</a>
-        <a routerLink="about-user" routerLinkActive="active" [style]="route_six">Sobre mí</a>
-        <a routerLink="contact-user" routerLinkActive="active" [style]="route_seven">Contáctanos</a>
-        <a class="icon-user" (click)="showSubMenu()"><i class="fas fa-user"></i></a>
+        <a routerLink="home-user" routerLinkActive="active">Inicio</a>
+        <a routerLink="beginner-user" routerLinkActive="active">¿Primera vez?</a>
+        <a routerLink="subscription-user" routerLinkActive="active">Suscríbete</a>
+        <a routerLink="blog-user" routerLinkActive="active">Blog</a>
+        <a routerLink="about-user" routerLinkActive="active">Sobre mí</a>
+        <a routerLink="contact-user" routerLinkActive="active">Contáctanos</a>
+        <a class="icon-user" (click)="showSubMenu()">
+            <i class="fas fa-user" *ngIf="!profileUser.image"></i>
+            <img [src]="imgUrl" alt="" class="photo" *ngIf="profileUser.image">
+        </a>
         <div [class]="class_submenu">
-            <a routerLink="login-user" href="">Iniciar sesión</a>
-            <a routerLink="resource-user" routerLinkActive="active" [style]="route_five">Recursos</a>
-            <a routerLink="p-&-r-user">P&R</a>
-            <a >Cerrar sesión</a>
+            <a class="icon-profile" *ngIf="profileUser.email">
+                <i class="fas fa-user" *ngIf="!profileUser.image"></i>
+                <img [src]="imgUrl" alt="" class="photo-2" *ngIf="profileUser.image">
+                <p class="profile-user">
+                    <span class="username">{{profileUser.username}}</span>
+                    <span class="name">{{profileUser.name}} {{profileUser.lastname}}</span>
+                </p>
+            </a>
+            <a routerLink="login-user" *ngIf="!profileUser.email" routerLinkActive="active">Iniciar sesión</a>
+            <a routerLink="profile-user" *ngIf="profileUser.email" routerLinkActive="active">Perfil</a>
+            <a routerLink="resource-user" routerLinkActive="active">Recursos</a>
+            <a routerLink="p-&-r-user" routerLinkActive="active">P&R</a>
+            <a (click)="logOut()" *ngIf="profileUser.email">Cerrar sesión</a>
         </div>   
     </nav>
 
@@ -41,3 +53,4 @@
 </section>
 
 <!-- Header Section End -->
+

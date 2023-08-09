@@ -66,6 +66,11 @@ section {
     transition: .5s;
 }
 
+.btn-know{
+    background: transparent;
+    border: .1rem solid var(--light-black);
+}
+
 .btn:hover {
     background: var(--main-color);
 }

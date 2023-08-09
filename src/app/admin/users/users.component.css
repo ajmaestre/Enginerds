@@ -34,7 +34,7 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: inherit;
     margin: 0;
 }
 
@@ -43,11 +43,11 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: inherit;
 }
 
 .book-form .flex .inputBox .search-group {
-    width: 100%;
+    width: 100rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +57,7 @@ section{
 .book-form .flex .inputBox input {
     width: inherit;
     padding: 1.2rem 1.4rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--light-black);
     text-transform: none;
     margin-top: 2.5rem;
@@ -75,6 +75,7 @@ section{
 }
 
 .book-form .flex .search-group a {
+    width: 5rem;
     font-size: 2.5rem;
     background: var(--footer-color);
     border: var(--border);
@@ -96,30 +97,58 @@ section{
 }
 
 .btn-group {
+    margin-left: 5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.cite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.profile{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    animation: fadeIn 1.2s linear backwards .2s;
 }
 
-.btn {
-    display: inline-block;
-    background: var(--light-black);
-    margin-top: 1rem;
-    color: var(--white);
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.text-title{
+    font-size: 15rem;
+    transform: scale(1.5);
+}
+
+.text {
+    font-size: 4rem;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    color: var(--light-black);
+    font-weight: 500;
+}
+
+.autor {
     font-size: 2rem;
-    text-align: center;
-    width: 30rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.btn:hover {
-    background: var(--main-color);
+    color: var(--light-black);
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -140,7 +169,12 @@ section{
     background: var(--white);
     display: inline-block;
     cursor: pointer;
-    transition: 1s;
+    transition: .5s;
+}
+
+.packages .box-container .background-selected{
+    border: .3rem solid var(--main-color);
+    box-shadow: var(--box-selected);
 }
 
 .packages .box-container .box:hover{
@@ -153,6 +187,7 @@ section{
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    background: var(--light-black);
 }
 
 .packages .box-container .box .image i{
@@ -181,22 +216,6 @@ section{
     font-weight: bold;
 }
 
-.btn{
-    width: 20%;
-    display: inline-block;
-    background: var(--black);
-    margin: 2rem 0;
-    color: var(--white);
-    font-size: 2rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.btn:hover{
-    background: var(--main-color);
-}
-
 .author{
     display: flex;
     align-items: center;
@@ -205,8 +224,8 @@ section{
 }
 
 .photo{
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     margin: 1rem;
 }
@@ -232,82 +251,7 @@ section{
     font-weight: bold;
 }
 
-.page{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 50rem;
-    padding: 7rem 5% 7rem 2%;
-}
-
-.aside{
-    width: 35rem;
-    font-family: var(--font-family-title);
-    font-size: .8rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.sect{
-    width: inherit;
-    border: .1rem solid #dfdfdf;
-    padding: 3rem 2.5rem;
-    box-shadow: var(--box-shadow);
-    margin-bottom: 2rem;
-}
-
-.sect div{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0;
-}
-
-.div.three{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.p.three{
-    margin-left: 1.5rem;
-}
-
-a{
-    text-decoration: none;
-    cursor: pointer;
-    transition: 1s;
-    font-weight: bold;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: .5s;
-}
-
-a:hover{
-    color: var(--main-color);
-}
-
-.p{
-    font-size: 1.5rem;
-    color: var(--light-black);
-    line-height: 2;
-    padding: 1rem 0;
-}
-
-.sect h3{
-    font-size: 2rem;
-    color: var(--black);
-    margin: 0 0 2rem 0;
-}
-
-.modal-register{
+.modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -318,6 +262,69 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.modal .card-msg{
+    width: 50rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn .5s linear backwards .2s;
+}
+
+.modal .card-msg .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    height: 10rem;
+    margin-top: 1.5rem;
+}
+
+.modal .card-msg .flex p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    line-height: 2;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.modal .card-msg .btn-group{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.modal .card-msg .btn-group .btn{
+    width: 30%;
+    display: inline-block;
+    background: var(--black);
+    margin: 2rem 0;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.modal .card-msg .btn-group .btn:hover{
+    background: var(--main-color);
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 450px) {

@@ -8,4 +8,5 @@ export class RegisterUsersService {
   loadModalRegister: boolean = false;
 
   constructor() { }
+  
 }

@@ -20,6 +20,9 @@ import { PostsComponent } from './admin/posts/posts.component';
 import { CommentsComponent } from './admin/comments/comments.component';
 import { RegisterComponent } from './user/register/register.component';
 import { RouteGuardGuard } from './guards/route-guard.guard';
+import { ProfileComponent } from './admin/profile/profile.component';
+import { ProfileUserComponent } from './user/profile-user/profile-user.component';
+import { AddPostComponent } from './admin/posts/add-post/add-post.component';
 
 
 const routesOptions: ExtraOptions = {
@@ -76,6 +79,9 @@ const routes: Routes = [
           path: 'register-user', component: RegisterComponent
         },
         {
+          path: 'profile-user', component: ProfileUserComponent
+        },
+        {
           path: '', 
           redirectTo: 'home-user',
           pathMatch: 'full' 
@@ -99,6 +105,12 @@ const routes: Routes = [
         },
         {
           path: 'comments', component: CommentsComponent
+        },
+        {
+          path: 'profile', component: ProfileComponent
+        },
+        {
+          path: 'add-post', component: AddPostComponent
         },
         {
           path: '', 

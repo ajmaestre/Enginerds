@@ -10,10 +10,6 @@ import { Router } from '@angular/router';
 })
 export class GuardService {
 
-is_admin: IsAuth = {
-  response: false
-};
-
   constructor(private router: Router, private http: HttpClient) { }
 
   isAdmin(): Observable<IsAuth>{
@@ -22,7 +18,10 @@ is_admin: IsAuth = {
     }).pipe(
       tap(
         (res: IsAuth) => {
-          return res.response;
+          if(res.response)
+            return res.response;
+          this.router.navigate(['/']);
+          return false;
         },
         (err) => {
           this.router.navigate(['/']);

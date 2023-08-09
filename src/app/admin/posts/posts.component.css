@@ -1,0 +1,574 @@
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+section{
+    padding: 7rem 5%;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.search {
+    padding: 0;
+    width: 100%;
+}
+
+.book-form {
+    padding: 0 0 5rem 2rem;
+    margin: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.book-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    margin: 0;
+}
+
+.book-form .flex .inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: inherit;
+}
+
+.book-form .flex .inputBox .search-group {
+    width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.book-form .flex .inputBox input {
+    width: inherit;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.4rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 2.5rem;
+    border: var(--border);
+}
+
+.book-form .flex .inputBox input:focus {
+    background: var(--light-black);
+    color: var(--white);
+}
+
+.book-form .flex .inputBox input:focus::placeholder {
+    background: var(--light-black);
+    color: var(--light-white);
+}
+
+.book-form .flex .search-group a {
+    width: 5rem;
+    font-size: 2.5rem;
+    background: var(--footer-color);
+    border: var(--border);
+    padding: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.book-form .flex .search-group a:hover {
+    background: var(--main-color);
+}
+
+.book-form .flex .search-group a i {
+    color: var(--white);
+}
+
+.btn-group {
+    margin-left: 5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.cite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.text-title{
+    font-size: 15rem;
+    transform: scale(1.5);
+}
+
+.text {
+    font-size: 4rem;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    color: var(--light-black);
+    font-weight: 500;
+}
+
+.autor {
+    font-size: 2rem;
+    color: var(--light-black);
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.articles {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 20rem;
+    padding: 0 10rem;
+}
+
+.other-posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.other-posts .box {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    display: inline-block;
+    cursor: pointer;
+    width: 50rem;
+    margin: 2rem;
+    transition: .5s;
+}
+
+.other-posts .box:hover .image .img {
+    transform: scale(1.1);
+}
+
+.other-posts .box .image {
+    height: 20rem;
+    overflow: hidden;
+}
+
+.other-posts .box .image .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .5s linear;
+}
+
+.other-posts .box .content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.other-posts .box .content h3 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 0;
+    text-align: left;
+}
+
+.other-posts .box .content p {
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.photo {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background: url(../../../assets/images/foto.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.name {
+    text-align: left;
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+
+.date {
+    text-align: left;
+    color: var(--light-black);
+    font-size: 1.5rem;
+}
+
+.articles a {
+    margin: 4rem 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(10, 10, 10, .4);
+    padding: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .card-msg{
+    width: 50rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn .5s linear backwards .2s;
+}
+
+.modal .card-msg .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    height: 10rem;
+    margin-top: 1.5rem;
+}
+
+.modal .card-msg .flex p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    line-height: 2;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.modal .card-msg .btn-group{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.modal .card-msg .btn-group .btn{
+    width: 30%;
+    display: inline-block;
+    background: var(--black);
+    margin: 2rem 0;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.modal .card-msg .btn-group .btn:hover{
+    background: var(--main-color);
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.card{
+    width: 120rem;
+    height: 55rem;
+    background: var(--white);
+    display: grid;
+    grid-template-rows: 80% 15%;
+    row-gap: 1rem;
+    padding: 2rem 5rem;
+}
+
+.card .body{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 1rem;
+}
+
+.body .data{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.data .book-form{
+    padding: 2rem;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.data .book-form .flex .inputBox{
+    flex: 1 1 41rem;
+    width: 90%;
+}
+
+.data .book-form .flex .inputBox input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.data .book-form .flex .inputBox input:focus{
+    background: var(--light-white);
+    color: var(--black);
+}
+
+.data .book-form .flex .inputBox input:focus::placeholder{
+    background: var(--light-white);
+    color: var(--black);
+}
+
+.data .book-form .flex .inputBox span{
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: left;
+    color: var(--light-black);
+    margin: 0;
+}
+
+.data .book-form .flex .inputBox .message{
+    width: 100%;
+    height: 15rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.readonly{
+    background: var(--light-white);
+}
+
+.body .list{
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+.btn-group input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    border: var(--border);
+}
+
+.btn-group input:focus{
+    background: var(--light-white);
+    color: var(--black);
+}
+
+.btn-group input:focus::placeholder{
+    background: var(--light-white);
+    color: var(--black);
+}
+
+.body .list .btn-group a {
+    width: 5rem;
+    font-size: 3rem;
+    background: var(--footer-color);
+    border: var(--border);
+    padding: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.reload{
+    margin-right: 5rem;
+}
+
+.body .list .btn-group a:hover {
+    background: var(--main-color);
+}
+
+.body .list .btn-group a i {
+    color: var(--white);
+}
+
+.list ul{
+    padding: 0 2rem;
+    margin-top: 2rem;
+    overflow-y: scroll;
+    height: 28rem;
+    border: var(--border);
+}
+
+.list ul .text {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.list ul .autor {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list ul li{
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    width: 100%;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-left: 5rem solid var(--main-color);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.list ul li a{
+    font-size: 1.5rem;
+    color: var(--light-black);
+}
+
+.list ul li:hover{
+    color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.card .btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card .btn-group .btn{
+    width: 30%;
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card .btn-group .btn:hover{
+    background: var(--main-color);
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .container{
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    section{
+        padding: 0;
+    }
+    .container{
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 10rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    section{
+        padding: 0;
+    }
+    .container{
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 10rem;
+    }
+}

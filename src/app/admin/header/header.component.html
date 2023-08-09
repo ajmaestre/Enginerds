@@ -21,17 +21,28 @@
     </a>
 
     <nav [class]="class_navbar">
-        <a routerLink="admin-home" routerLinkActive="active" [style]="route_one">Inicio</a>
-        <a routerLink="users" routerLinkActive="active" [style]="route_two">Usuarios</a>
-        <a routerLink="categories" routerLinkActive="active" [style]="route_three">Categorías</a>
-        <a routerLink="posts" routerLinkActive="active" [style]="route_four">Posts</a>
-        <a routerLink="comments" routerLinkActive="active" [style]="route_six">Comentarios</a>
-        <a class="icon-user" (click)="showSubMenu()"><i class="fas fa-user"></i></a>
+        <a routerLink="admin-home" routerLinkActive="active">Inicio</a>
+        <a routerLink="users" routerLinkActive="active" >Usuarios</a>
+        <a routerLink="categories" routerLinkActive="active">Categorías</a>
+        <a routerLink="posts" routerLinkActive="active">Posts</a>
+        <a routerLink="comments" routerLinkActive="active">Comentarios</a>
+        <a class="icon-user" (click)="showSubMenu()">
+            <i class="fas fa-user" *ngIf="!profileUser.image"></i>
+            <img [src]="imgUrl" alt="" class="photo" *ngIf="profileUser.image">
+        </a>
         <div [class]="class_submenu">
-            <a routerLink="login-user" href="">Iniciar sesión</a>
-            <a routerLink="resource-user" routerLinkActive="active" [style]="route_five">Recursos</a>
-            <a routerLink="p-&-r-user">P&R</a>
-            <a >Cerrar sesión</a>
+            <a class="icon-profile">
+                <i class="fas fa-user" *ngIf="!profileUser.image"></i>
+                <img [src]="imgUrl" alt="" class="photo-2" *ngIf="profileUser.image">
+                <p class="profile-user">
+                    <span class="username">{{profileUser.username}}</span>
+                    <span class="name">{{profileUser.name}} {{profileUser.lastname}}</span>
+                </p>
+            </a>
+            <a routerLink="profile" routerLinkActive="active">Perfil</a>
+            <a routerLink="resource-user" routerLinkActive="active">Recursos</a>
+            <a routerLink="p-&-r-user" routerLinkActive="active">P&R</a>
+            <a (click)="logOut()">Cerrar sesión</a>
         </div>   
     </nav>
 

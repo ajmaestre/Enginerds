@@ -12,11 +12,12 @@ import { ResourceComponent } from './resource/resource.component';
 import { QuestionAndResponseComponent } from './question-and-response/question-and-response.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileUserComponent } from './profile-user/profile-user.component';
 
 
 
 @NgModule({
-  declarations: [UserComponent, SubscriptionComponent, BlogComponent, AboutComponent, ContactComponent, ArticleComponent, LateralMenuComponent, ResourceComponent, QuestionAndResponseComponent, LoginComponent, RegisterComponent],
+  declarations: [UserComponent, SubscriptionComponent, BlogComponent, AboutComponent, ContactComponent, ArticleComponent, LateralMenuComponent, ResourceComponent, QuestionAndResponseComponent, LoginComponent, RegisterComponent, ProfileUserComponent],
   imports: [
     CommonModule
   ],

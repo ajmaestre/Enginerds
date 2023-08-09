@@ -1,19 +1,18 @@
 
 .container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 75% 20%;
+    column-gap: 2rem;
 }
 
 section{
-    padding: 7rem 2% 2rem 5%;
+    padding: 5rem 2% 2rem 5%;
 }
 
 .page{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 50rem;
-    padding: 7rem 5% 7rem 2%;
+    width: 35rem;
+    padding: 5rem 5% 5rem 2%;
 }

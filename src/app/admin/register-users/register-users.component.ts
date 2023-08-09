@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { UsersService } from '../users/users.service';
 import { RegisterUsersService } from './register-users.service';
+import { UsersComponent } from '../users/users.component';
 
 @Component({
   selector: 'app-register-users',
@@ -14,7 +15,7 @@ export class RegisterUsersComponent implements OnInit {
   private registerSubscription!: Subscription;
   data: FormGroup;
 
-  constructor(private usersService: UsersService, public registerService: RegisterUsersService) { 
+  constructor(private usersService: UsersService, public registerService: RegisterUsersService, private userComponent: UsersComponent) { 
     this.data = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       name: new FormControl('', Validators.required),
@@ -33,6 +34,7 @@ export class RegisterUsersComponent implements OnInit {
       {
         next: (res) => {
           this.cleanForm();
+          this.userComponent.getListUsers();
         },
         error: (error) => {
           console.log(error);

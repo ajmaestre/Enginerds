@@ -46,6 +46,12 @@ import { PostsComponent } from './admin/posts/posts.component';
 import { CommentsComponent } from './admin/comments/comments.component';
 import { RegisterComponent } from './user/register/register.component';
 import { RegisterUsersComponent } from './admin/register-users/register-users.component';
+import { UpdateUsersComponent } from './admin/update-users/update-users.component';
+import { AddCategoryComponent } from './admin/categories/add-category/add-category.component';
+import { ProfileComponent } from './admin/profile/profile.component';
+import { ProfileUserComponent } from './user/profile-user/profile-user.component';
+import { PageAdminComponent } from './admin/page-admin/page-admin.component';
+import { AddPostComponent } from './admin/posts/add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +96,13 @@ import { RegisterUsersComponent } from './admin/register-users/register-users.co
     PostsComponent,
     CommentsComponent,
     RegisterComponent,
-    RegisterUsersComponent
+    RegisterUsersComponent,
+    UpdateUsersComponent,
+    AddCategoryComponent,
+    ProfileComponent,
+    ProfileUserComponent,
+    PageAdminComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

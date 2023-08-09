@@ -53,6 +53,17 @@ section{
     margin-right: .3rem;
 }
 
+.header .navbar .active {
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
@@ -68,6 +79,37 @@ section{
 .header .navbar .icon-user{
     font-size: 2.5rem;
     margin-left: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: .1rem solid #dfdfdf;
+    padding-bottom: 1rem;
+}
+
+.icon-profile i{
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.profile-user{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.profile-user .username{
+    font-weight: bold;
 }
 
 #menu-btn{
@@ -91,16 +133,31 @@ section{
     position: absolute;
     border: .1rem solid #dfdfdf;
     box-shadow: var(--box-shadow);
-    width: 20%;
+    width: 25%;
     top: 99%;
-    right: 0;
+    right: 1rem;
     background-color: var(--white);
     padding: 2rem;
+    padding-right: 6rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .submenu.show a{
     margin: .5rem;
+}
+
+.photo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transform: scale(1.3);
+}
+
+.photo-2 {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 1rem;
 }
 
 @media (max-width: 768px) {
